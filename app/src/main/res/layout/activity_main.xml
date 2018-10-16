@@ -10,7 +10,7 @@
     android:background="#FFFFFF">
 
     <LinearLayout
-        android:id="@+id/imgs"
+        android:id="@+id/line0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -18,28 +18,99 @@
 
         <ImageView
             style="@style/slot_position"
-            android:id="@+id/img1"
+            android:id="@+id/line0_img0"
             android:src="@drawable/slot6"/>
 
         <ImageView
             style="@style/slot_position"
-            android:id="@+id/img2"
+            android:id="@+id/line0_img1"
             android:src="@drawable/slot6"/>
 
         <ImageView
             style="@style/slot_position"
-            android:id="@+id/img3"
+            android:id="@+id/line0_img2"
             android:src="@drawable/slot6"/>
 
         <ImageView
             style="@style/slot_position"
-            android:id="@+id/img4"
+            android:id="@+id/line0_img3"
             android:src="@drawable/slot6"/>
 
         <ImageView
             style="@style/slot_position"
-            android:id="@+id/img5"
+            android:id="@+id/line0_img4"
             android:src="@drawable/slot6"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/line0"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            style="@style/slot_position"
+            android:id="@+id/line1_img0"
+            android:src="@drawable/slot6"/>
+
+        <ImageView
+            style="@style/slot_position"
+            android:id="@+id/line1_img1"
+            android:src="@drawable/slot6"/>
+
+        <ImageView
+            style="@style/slot_position"
+            android:id="@+id/line1_img2"
+            android:src="@drawable/slot6"/>
+
+        <ImageView
+            style="@style/slot_position"
+            android:id="@+id/line1_img3"
+            android:src="@drawable/slot6"/>
+
+        <ImageView
+            style="@style/slot_position"
+            android:id="@+id/line1_img4"
+            android:src="@drawable/slot6"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/line1"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            style="@style/slot_position"
+            android:id="@+id/line2_img0"
+            android:src="@drawable/slot6"/>
+
+        <ImageView
+            style="@style/slot_position"
+            android:id="@+id/line2_img1"
+            android:src="@drawable/slot6"/>
+
+        <ImageView
+            style="@style/slot_position"
+            android:id="@+id/line2_img2"
+            android:src="@drawable/slot6"/>
+
+        <ImageView
+            style="@style/slot_position"
+            android:id="@+id/line2_img3"
+            android:src="@drawable/slot6"/>
+
+        <ImageView
+            style="@style/slot_position"
+            android:id="@+id/line2_img4"
+            android:src="@drawable/slot6"/>
+
 
     </LinearLayout>
 
@@ -47,8 +118,8 @@
         android:id="@+id/msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_below="@id/imgs"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/line2"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -56,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/msg"
         android:layout_centerHorizontal="true"/>
 
