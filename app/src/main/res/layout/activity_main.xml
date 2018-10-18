@@ -110,8 +110,6 @@
             style="@style/slot_position"
             android:id="@+id/line2_img4"
             android:src="@drawable/slot6"/>
-
-
     </LinearLayout>
 
     <TextView
@@ -129,6 +127,17 @@
         android:text="Start"
         android:layout_marginTop="10dp"
         android:layout_below="@id/msg"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"
+        android:layout_alignBaseline="@id/btn"
+        android:layout_toRightOf="@id/btn"
+        android:onClick="onClickNext"
         android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
