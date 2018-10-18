@@ -16,7 +16,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="далее"
+        android:text="next"
         android:layout_gravity="center_horizontal"
         app:layout_constraintTop_toBottomOf="@id/imageSwitcher"
         app:layout_constraintLeft_toLeftOf="parent"
