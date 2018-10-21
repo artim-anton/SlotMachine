@@ -54,13 +54,24 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i = 0; i < 3; i++) {
                     if (isStarted) {
+                        WHEELS[0][0].stopWheel();
+                        WHEELS[0][1].stopWheel();
+                        WHEELS[0][2].stopWheel();
+                        WHEELS[0][3].stopWheel();
+                        WHEELS[0][4].stopWheel();
+
                         WHEELS[1][0].stopWheel();
                         WHEELS[1][1].stopWheel();
                         WHEELS[1][2].stopWheel();
                         WHEELS[1][3].stopWheel();
                         WHEELS[1][4].stopWheel();
+
+                        WHEELS[2][0].stopWheel();
+                        WHEELS[2][1].stopWheel();
+                        WHEELS[2][2].stopWheel();
+                        WHEELS[2][3].stopWheel();
+                        WHEELS[2][4].stopWheel();
 
                         if (WHEELS[1][0].currentIndex == WHEELS[1][1].currentIndex && WHEELS[1][1].currentIndex == WHEELS[1][2].currentIndex
                                 && WHEELS[1][2].currentIndex == WHEELS[1][3].currentIndex && WHEELS[1][3].currentIndex == WHEELS[1][4].currentIndex) {
@@ -78,6 +89,80 @@ public class MainActivity extends AppCompatActivity {
                         isStarted = false;
 
                     } else {
+
+                        // first line
+
+                        WHEELS[0][0] = new Wheel(new Wheel.WheelListener() {
+                            @Override
+                            public void newImage(final int img) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        IMGS[0][0].setImageResource(img);
+                                    }
+                                });
+                            }
+                        }, 200, randomLong(0, 200));
+
+                        WHEELS[0][0].start();
+
+                        WHEELS[0][1] = new Wheel(new Wheel.WheelListener() {
+                            @Override
+                            public void newImage(final int img) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        IMGS[0][1].setImageResource(img);
+                                    }
+                                });
+                            }
+                        }, 200, randomLong(150, 400));
+
+                        WHEELS[0][1].start();
+
+                        WHEELS[0][2] = new Wheel(new Wheel.WheelListener() {
+                            @Override
+                            public void newImage(final int img) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        IMGS[0][2].setImageResource(img);
+                                    }
+                                });
+                            }
+                        }, 200, randomLong(150, 400));
+
+                        WHEELS[0][2].start();
+
+                        WHEELS[0][3] = new Wheel(new Wheel.WheelListener() {
+                            @Override
+                            public void newImage(final int img) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        IMGS[0][3].setImageResource(img);
+                                    }
+                                });
+                            }
+                        }, 200, randomLong(150, 400));
+
+                        WHEELS[0][3].start();
+
+                        WHEELS[0][4] = new Wheel(new Wheel.WheelListener() {
+                            @Override
+                            public void newImage(final int img) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        IMGS[0][4].setImageResource(img);
+                                    }
+                                });
+                            }
+                        }, 200, randomLong(150, 400));
+
+                        WHEELS[0][4].start();
+
+                        // second line
 
                         WHEELS[1][0] = new Wheel(new Wheel.WheelListener() {
                             @Override
@@ -149,11 +234,82 @@ public class MainActivity extends AppCompatActivity {
 
                         WHEELS[1][4].start();
 
+                        // third line
+
+                        WHEELS[2][0] = new Wheel(new Wheel.WheelListener() {
+                            @Override
+                            public void newImage(final int img) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        IMGS[2][0].setImageResource(img);
+                                    }
+                                });
+                            }
+                        }, 200, randomLong(0, 200));
+
+                        WHEELS[2][0].start();
+
+                        WHEELS[2][1] = new Wheel(new Wheel.WheelListener() {
+                            @Override
+                            public void newImage(final int img) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        IMGS[2][1].setImageResource(img);
+                                    }
+                                });
+                            }
+                        }, 200, randomLong(150, 400));
+
+                        WHEELS[2][1].start();
+
+                        WHEELS[2][2] = new Wheel(new Wheel.WheelListener() {
+                            @Override
+                            public void newImage(final int img) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        IMGS[2][2].setImageResource(img);
+                                    }
+                                });
+                            }
+                        }, 200, randomLong(150, 400));
+
+                        WHEELS[2][2].start();
+
+                        WHEELS[2][3] = new Wheel(new Wheel.WheelListener() {
+                            @Override
+                            public void newImage(final int img) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        IMGS[2][3].setImageResource(img);
+                                    }
+                                });
+                            }
+                        }, 200, randomLong(150, 400));
+
+                        WHEELS[2][3].start();
+
+                        WHEELS[2][4] = new Wheel(new Wheel.WheelListener() {
+                            @Override
+                            public void newImage(final int img) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        IMGS[2][4].setImageResource(img);
+                                    }
+                                });
+                            }
+                        }, 200, randomLong(150, 400));
+
+                        WHEELS[2][4].start();
+
                         btn.setText("Stop");
                         msg.setText("");
                         isStarted = true;
                     }
-                }
             }
         });
     }
